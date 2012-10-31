@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">Android Ejemplos</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="lista_vacia">No hay elementos</string>
+    <string name="button_lista">Lista</string>
+    <string name="menuOption1">Toast</string>
+    <string name="menuOption2">Alert</string>
+    <string name="msgTitle">Alerta</string>
+    <string name="msgBody">Has pulsado</string>
+    <string name="button_prefs">Preferencias</string>
+    <string name="button_prefs_show">Mostrar preferencias</string>
+    <string name="button_web">Web</string>
+    <string name="button_alarm">Alarma en 5 sec</string>
+    <string name="button_init_thread">Iniciar hilo</string>
+    <string name="button_thread">Thread</string>
+
+</resources>

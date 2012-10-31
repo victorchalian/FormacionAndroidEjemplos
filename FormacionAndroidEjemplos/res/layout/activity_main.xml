@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnLista"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_lista"
+        android:onClick="onClick" />
+    <Button
+        android:id="@+id/btnPrefs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_prefs"
+        android:onClick="onClick" />
+    <Button
+        android:id="@+id/btnPrefsShow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_prefs_show"
+        android:onClick="onClick" />
+     <Button
+        android:id="@+id/btnWeb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_web"
+        android:onClick="onClick" />
+      <Button
+        android:id="@+id/btnAlarm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_alarm"
+        android:onClick="onClick" />
+      <Button
+        android:id="@+id/btnThread"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_thread"
+        android:onClick="onClick" />
+    
+</LinearLayout>
