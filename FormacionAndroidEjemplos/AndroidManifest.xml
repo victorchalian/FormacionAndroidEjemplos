@@ -8,7 +8,7 @@
         android:targetSdkVersion="15" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -30,12 +30,12 @@
 
         <service android:name=".AlarmService" />
 
-        <!-- <receiver android:name=".MiBroadcastReceiver" >
+        <receiver android:name=".MiBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" >
                 </action>
             </intent-filter>
-        </receiver> -->
+        </receiver>
     </application>
 
 </manifest>
