@@ -56,8 +56,7 @@ public class MainActivity extends Activity {
 			break;
 		case R.id.btnAlarm:
 			// Registramos la alarma dentro de 5 sec
-			//establecerAlarma(5);
-			Toast.makeText(this, "No implementado", Toast.LENGTH_LONG).show();
+			establecerAlarma(5);
 			break;
 		case R.id.btnThread:
 			// Abrimos la actividad donde probaremos los hilos
@@ -128,6 +127,24 @@ public class MainActivity extends Activity {
 		mostrarAlert(getString(R.string.msgTitle), builder.toString());
 
 	}
+	
+	
+    /** 
+     * se ejecutara despues de los segundos especificados
+     * @param when Numero de segundos  
+     */  
+    private void establecerAlarma(int sec){   
+  
+           Intent        intent  = new Intent(MainActivity.this, AlarmService.class);  
+           PendingIntent pIntent = PendingIntent.getService(MainActivity.this, 0, intent,  0);
+  
+           AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE); 
+           
+           manager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + sec * 1000, pIntent);       
+           // Tambien es interesante el metodo que permitiria alarmas periodicas
+           // manager.setRepeating(...)
+    }  
+
 	
 
 }
