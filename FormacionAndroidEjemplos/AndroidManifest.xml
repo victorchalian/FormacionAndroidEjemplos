@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <activity android:name=".ListaActivity" > -->
+        <activity android:name=".ListaActivity" />
         <!-- <activity android:name=".PrefsActivity" > -->
         <!-- <activity android:name=".WebActivity" > -->
         <!-- <activity android:name=".ThreadActivity" /> -->
