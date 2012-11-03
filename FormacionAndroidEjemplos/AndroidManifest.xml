@@ -26,7 +26,7 @@
         <activity android:name=".ListaActivity" />
         <activity android:name=".PrefsActivity" />
         <activity android:name=".WebActivity" />
-        <!-- <activity android:name=".ThreadActivity" /> -->
+        <activity android:name=".ThreadActivity" />
 
         <service android:name=".AlarmService" />
 

@@ -60,9 +60,8 @@ public class MainActivity extends Activity {
 			break;
 		case R.id.btnThread:
 			// Abrimos la actividad donde probaremos los hilos
-			//intent = new Intent(this, ThreadActivity.class);
-			//this.startActivity(intent);
-			Toast.makeText(this, "No implementado", Toast.LENGTH_LONG).show();
+			intent = new Intent(this, ThreadActivity.class);
+			this.startActivity(intent);
 			break;
 		}
 	}
