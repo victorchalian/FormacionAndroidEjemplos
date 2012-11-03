@@ -51,9 +51,8 @@ public class MainActivity extends Activity {
 			break;
 		case R.id.btnWeb:
 			// Abrimos la pantalla del webview
-			//intent = new Intent(this, WebActivity.class);
-			//this.startActivity(intent);
-			Toast.makeText(this, "No implementado", Toast.LENGTH_LONG).show();
+			intent = new Intent(this, WebActivity.class);
+			this.startActivity(intent);
 			break;
 		case R.id.btnAlarm:
 			// Registramos la alarma dentro de 5 sec
