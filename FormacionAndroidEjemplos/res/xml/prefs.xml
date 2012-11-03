@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory 
+        android:title="Información de acceso" >
+        <EditTextPreference
+            android:key="username"
+            android:summary="Por favor escribe tu nombre de usuario"
+            android:title="Username" />
+        <EditTextPreference
+            android:key="password"
+            android:summary="Por favor introduce tu contraseña"
+            android:title="Contraseña" />
+    </PreferenceCategory>
+    <PreferenceCategory 
+        android:title="Configuración" >
+        <CheckBoxPreference
+            android:key="checkBox"
+            android:summary="On/Off"
+            android:title="Recordar credenciales" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
+
+
+
