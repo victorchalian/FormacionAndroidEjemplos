@@ -47,8 +47,7 @@ public class MainActivity extends Activity {
 			break;
 		case R.id.btnPrefsShow:
 			// Mostramos las preferencias
-			//mostrarPreferences();
-			Toast.makeText(this, "No implementado", Toast.LENGTH_LONG).show();
+			mostrarPreferences();
 			break;
 		case R.id.btnWeb:
 			// Abrimos la pantalla del webview
@@ -86,5 +85,50 @@ public class MainActivity extends Activity {
 		alertDialog.setIcon(android.R.drawable.btn_dialog);
 		alertDialog.show();
 	}
+	
+
+	private void mostrarPreferences() {
+
+		// Preferencias manejadas por la aplicacion, no se ven en el XML
+		// Y podemos usarlas para lo que queramos... por ejemplo para contar
+		// cuantas veces hemos mostrado las preferencias!
+		
+		//Asi leemos
+		SharedPreferences leerMisPrefs = MainActivity.this.getSharedPreferences(
+				"MISPREFS", Activity.MODE_PRIVATE);
+		
+		int cuantasVeces = leerMisPrefs.getInt("CUANTASVECES", 0);
+
+		//Asi escribimos
+		SharedPreferences escribirMisPrefs = MainActivity.this.getSharedPreferences(
+				"MISPREFS", Activity.MODE_PRIVATE);
+		SharedPreferences.Editor editor = escribirMisPrefs.edit();
+		
+		cuantasVeces++; //Lo acabamos de leer una vez mas
+		
+		editor.putInt("CUANTASVECES", cuantasVeces); //Guardamos el nuevo valor
+		editor.commit();
+
+
+		// Ahora un ejemplo de lectura de preferencias 
+		// manejadas en el XML
+		SharedPreferences prefs = 
+			PreferenceManager
+			.getDefaultSharedPreferences(MainActivity.this);
+
+		String username = prefs.getString("username", "vacio");
+		String passw = prefs.getString("password", "vacio");
+		boolean checkBox = prefs.getBoolean("checkBox", false);
+
+		StringBuilder builder = new StringBuilder();
+		builder.append("Username: " + username + "\n");
+		builder.append("Contraseña: " + passw + "\n");
+		builder.append("Recordar: " + String.valueOf(checkBox) + "\n");
+		builder.append("Hemos leido esto " + cuantasVeces + " veces");
+
+		mostrarAlert(getString(R.string.msgTitle), builder.toString());
+
+	}
+	
 
 }
