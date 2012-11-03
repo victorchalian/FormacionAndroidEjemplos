@@ -30,6 +30,23 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
+	
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.MenuOption1:
+			mostrarToast(getString(R.string.msgBody));
+			return true;
+		case R.id.MenuOption2:
+			mostrarAlert(getString(R.string.msgTitle),
+					getString(R.string.msgBody));
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
 
 
 	public void onClick(final View view) {

@@ -1,6 +1,19 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_settings"
-        android:title="@string/menu_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
+<menu 
+xmlns:android=
+"http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/MenuOption1"
+        android:icon="@android:drawable/btn_star"
+        android:title="@string/menuOption1">
+    </item>
+    <item
+        android:id="@+id/MenuOption2"
+        android:icon="@android:drawable/btn_dialog"
+        android:title="@string/menuOption2">
+    </item>
+
 </menu>
+
+
+
